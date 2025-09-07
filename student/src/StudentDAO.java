@@ -12,7 +12,7 @@ public class StudentDAO {
             pst.setInt(2, student.getAge());
             pst.setString(3, student.getGrade());
             pst.executeUpdate();
-            System.out.println("✅ Student added successfully!");
+            System.out.println("Student added successfully!");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -47,9 +47,9 @@ public class StudentDAO {
             pst.setInt(4, id);
             int rows = pst.executeUpdate();
             if (rows > 0) {
-                System.out.println("✅ Student updated!");
+                System.out.println("Student updated!");
             } else {
-                System.out.println("❌ Student not found!");
+                System.out.println("Student not found!");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -63,12 +63,13 @@ public class StudentDAO {
             pst.setInt(1, id);
             int rows = pst.executeUpdate();
             if (rows > 0) {
-                System.out.println("✅ Student deleted!");
+                System.out.println("Student deleted!");
             } else {
-                System.out.println("❌ Student not found!");
+                System.out.println("Student not found!");
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 }
+
